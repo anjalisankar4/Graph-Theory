@@ -35,7 +35,6 @@ int main()
 	cout << "Enter number of nodes and edges: " << endl;
 	cin >> n >> m;
 	vector<bool> visited(n, false);
-	vector<bool> inStack(n, false);
 	vector<vector < int>> adjList(n);
 	cout << "Enter edges: " << endl;
 	for (int i = 0; i < m; i++)
