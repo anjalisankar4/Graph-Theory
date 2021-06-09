@@ -32,30 +32,28 @@ void add_edge(vector<vector < int>> &adjList, int u, int v)
 
 int main()
 {
+	int n, m;
+	cout << "Enter number of nodes and edges: " << endl;
+	cin >> n >> m;
+	vector<bool> visited(n, false);
+	vector<vector < int>> adjList(n);
+	cout << "Enter edges: " << endl;
+	for (int i = 0; i < m; i++)
 	{
-		int n, m;
-		cout << "Enter number of nodes and edges: " << endl;
-		cin >> n >> m;
-		vector<bool> visited(n, false);
-		vector<vector < int>> adjList(n);
-		cout << "Enter edges: " << endl;
-		for (int i = 0; i < m; i++)
-		{
-			int u, v;
-			cin >> u >> v;
-			add_edge(adjList, u, v);
-
-		}
-
-		for (int i = 0; i < n; i++)
-		{
-			if (!visited[i])
-			{
-				bfs(adjList, visited, i);
-			}
-		}
-
-		return 0;
+		int u, v;
+		cin >> u >> v;
+		add_edge(adjList, u, v);
 
 	}
+
+	for (int i = 0; i < n; i++)
+	{
+		if (!visited[i])
+		{
+			bfs(adjList, visited, i);
+		}
+	}
+
+	return 0;
+
 }
