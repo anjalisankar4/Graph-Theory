@@ -65,6 +65,9 @@ int main()
 		cout << "Cycle found" << "\n";
 
 	}
-	else cout << "Cycle not found" << "\n";
+	else
+	{
+		cout << "Cycle not found" << "\n";
+	}
 	return 0;
 }
