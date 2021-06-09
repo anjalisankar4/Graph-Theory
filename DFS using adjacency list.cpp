@@ -3,14 +3,13 @@ using namespace std;
 
 void dfs(const vector<vector < int>> &adjList, vector< bool > &visited, int source)
 {
-	if (visited[source]) return;
 	cout << "visited:" << source << endl;
 	visited[source] = true;
 	int totalNeighbours = adjList[source].size();
 	for (int i = 0; i < totalNeighbours; i++)
 	{
 		int neighbourNode = adjList[source][i];
-		if (visited[neighbourNode] == false)
+		if (!visited[neighbourNode])
 		{
 			dfs(adjList, visited, neighbourNode);
 		}
@@ -41,7 +40,10 @@ int main()
 
 	for (int i = 0; i < n; i++)
 	{
-		dfs(adjList, visited, i);
+		if (!visited[i])
+		{
+			dfs(adjList, visited, i);
+		}
 	}
 
 	return 0;
