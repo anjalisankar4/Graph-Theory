@@ -45,18 +45,24 @@ int main()
 		addEdge(adjList, u, v);
 
 	}
-
+	int flag = 0;
 	for (int i = 0; i < n; i++)
 	{
 		if (!visited[i])
 		{
 			if (isCyclic(i, -1, adjList, visited))
 			{
-				cout << "Graph has a cycle" << endl;
-				return 0;
+				flag = 1;
+				break;
 			}
 		}
 	}
 
-	cout << "Graph doesn't have a cycle" << endl;
+	if (flag == 1)
+	{
+		cout << "Cycle found" << "\n";
+
+	}
+	else cout << "Cycle not found" << "\n";
+	return 0;
 }
