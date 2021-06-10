@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-bool isCyclic(int node, int parent, vector<vector < int>> &adjList, vector< bool > &visited)
+bool isCyclic(int node, int parent, const vector<vector < int>> &adjList, vector< bool > &visited)
 {
 	visited[node] = true;
 	int neighbours = adjList[node].size();
