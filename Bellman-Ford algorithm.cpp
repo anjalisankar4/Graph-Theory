@@ -8,15 +8,12 @@ struct edges
 };
 int main()
 {
+	vector<edges> vec;
 	int n, e, source;
 	cout << "Enter number of nodes,edges and the source:" << "\n";
 	cin >> n >> e >> source;
-
-	vector<edges> vec;
-	
 	vector<int> dist(n, 1e7);
 	dist[source] = 0;
-	
 	cout << "Enter edges" << "\n";
 	for (int i = 0; i < e; i++)
 	{
