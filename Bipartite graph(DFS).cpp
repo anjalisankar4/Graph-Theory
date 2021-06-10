@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-bool isBipartite(vector<vector < int>> &adjList, vector< int > &color, int node)
+bool isBipartite(const vector<vector < int>> &adjList, vector< int > &color, int node)
 {
 	if (color[node] == -1)
 	{
