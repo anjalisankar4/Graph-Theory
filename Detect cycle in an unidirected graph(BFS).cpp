@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-bool isCyclic(int node, vector<vector < int>> &adjList, vector< bool > &visited)
+bool isCyclic(int node, const vector<vector < int>> &adjList, vector< bool > &visited)
 {
 	queue<pair<int, int>> q;
 	q.push({ node, -1 });
