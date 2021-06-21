@@ -1,6 +1,6 @@
 #include <iostream>
 #include <queue>
-#include<vector>
+#include <vector>
 using namespace std;
 void topoSort(vector<vector < int>> &adjList, int n, vector< int > &inDegree)
 {
