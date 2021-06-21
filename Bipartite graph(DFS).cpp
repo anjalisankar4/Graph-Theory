@@ -2,11 +2,7 @@
 using namespace std;
 bool isBipartite(const vector<vector < int>> &adjList, vector< int > &color, int node)
 {
-	if (color[node] == -1)
-	{
-		color[node] = 1;
-	}
-
+	
 	int neighbours = adjList[node].size();
 	for (int i = 0; i < neighbours; i++)
 	{
@@ -55,6 +51,7 @@ int main()
 	{
 		if (color[i] == -1)
 		{
+			color[node] = 1;
 			if (isBipartite(adjList, color, i) == false)
 			{
 				flag = 1;
