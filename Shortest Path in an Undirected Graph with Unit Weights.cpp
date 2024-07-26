@@ -19,6 +19,7 @@ void shortDist(vector<vector<int>> &adjList, int n, int source)
         {
             int neighbourNode = adjList[node][i];
             if (dist[node] + 1 < dist[neighbourNode])
+            {
                 q.push(neighbourNode);
                 dist[neighbourNode] = dist[node] + 1;
             }
